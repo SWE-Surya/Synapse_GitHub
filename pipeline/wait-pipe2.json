@@ -4,7 +4,7 @@
 		"activities": [
 			{
 				"name": "Wait-surya2",
-				"description": "def",
+				"description": "xyz",
 				"type": "Wait",
 				"dependsOn": [],
 				"userProperties": [],

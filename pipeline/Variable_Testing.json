@@ -1,0 +1,30 @@
+{
+	"name": "Variable_Testing",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Hello",
+					"value": ""
+				}
+			}
+		],
+		"variables": {
+			"Hello": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "Folder1"
+		},
+		"annotations": []
+	}
+}

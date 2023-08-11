@@ -1,9 +1,9 @@
 {
-	"name": "var-pipe",
+	"name": "Pipeline 1",
 	"properties": {
 		"activities": [
 			{
-				"name": "Set variable1",
+				"name": "Set variable2",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"policy": {

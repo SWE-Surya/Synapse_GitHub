@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "create table stg\n(\n    id int,\n    name varchar(20),\n    country varchar(30),\n    DimensionCheckSum int default -1\n\n)\nwith\n(\n    DISTRIBUTION = HASH ( [id] ),\n\tCLUSTERED COLUMNSTORE INDEX\n)\n\ncreate table scd2\n(\n    id int,\n    name varchar(20),\n    country varchar(30),\n    DimensionCheckSum int default -1,\n    ValidFrom datetime,\n    ValidTo date default '12/31/9999',\n    CurrentRecord int default 1\n\n)\nwith\n(\n    DISTRIBUTION = HASH ( [id] ),\n\tCLUSTERED COLUMNSTORE INDEX\n)\n\ninsert into stg\nvalues (1,'abc','australia',-1)\ninsert into stg\nvalues (2,'bcd','US',-1)\n\n\n\nSELECT * FROM stg where DimensionCheckSum=410179;\n\n--Updates the Checksum of all the columns in a CheckSum field of Staging Table\nUPDATE stg SET DimensionCheckSum=\nBINARY_CHECKSUM\n(\n    [id],\n    [name],\n    [country]\n);\n\n\n\n--Insert only those records which have an update by comparing Checksum against the record which was last active\nINSERT INTO scd2\n    SELECT \n    stg_table.[id],\n    stg_table.[name],\n    stg_table.[country],\n    stg_table.[DimensionCheckSum],\n    GETDATE(), \n    '12/31/9999', \n    1\n    FROM stg stg_table\n    JOIN scd2 main_table \n    ON stg_table.id = main_table.id\n    WHERE (stg_table.DimensionCheckSum<> main_table.DimensionCheckSum) AND main_table.CurrentRecord<>0\n\n\n\n\n\n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "DEV",
+				"poolName": "DEV"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

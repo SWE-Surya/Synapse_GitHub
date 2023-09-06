@@ -1,0 +1,31 @@
+{
+	"name": "department",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "created_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "department_name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "testSy",
+			"table": "Department"
+		},
+		"sqlPool": {
+			"referenceName": "MockDediPool1",
+			"type": "SqlPoolReference"
+		}
+	}
+}

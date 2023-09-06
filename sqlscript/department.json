@@ -1,0 +1,17 @@
+{
+	"name": "department",
+	"properties": {
+		"content": {
+			"query": "CREATE SCHEMA testSy;\n\n\nCREATE TABLE [testSy].[Department](\n    id VARCHAR(18),\n    created_date DATETIME,\n    department_name VARCHAR(50)\n);\n\nSELECT * from [testSy].[Department];",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "MockDediPool1",
+				"poolName": "MockDediPool1"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

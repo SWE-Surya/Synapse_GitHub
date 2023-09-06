@@ -1,0 +1,37 @@
+{
+	"name": "department_dataSet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "synapse-dwhbi-mockup-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Department.csv",
+				"folderPath": "Sample Data Files",
+				"fileSystem": "fs-dwhbi-mockup"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "CreatedDate",
+				"type": "String"
+			},
+			{
+				"name": "Department Name",
+				"type": "String"
+			}
+		]
+	}
+}

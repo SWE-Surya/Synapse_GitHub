@@ -2,7 +2,7 @@
 	"name": "Testing_Script",
 	"properties": {
 		"content": {
-			"query": "--  New Script for Testing PROD",
+			"query": "--  New Script for Testing PROD\n\nGIT PULL IS USED TO BRING CHANGES IN REMOTE REPOSITORY(AZURE)",
 			"metadata": {
 				"language": "sql"
 			},

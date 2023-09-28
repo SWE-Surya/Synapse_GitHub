@@ -1,0 +1,16 @@
+{
+	"name": "Testing_Script",
+	"properties": {
+		"content": {
+			"query": "--  New Script for Testing PROD\n\nGIT PULL IS USED TO BRING CHANGES IN REMOTE REPOSITORY(AZURE) \n this particularchange will be now happening in vs code, shall be reflected in Azure","metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "PROD",
+				"poolName": "PROD"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

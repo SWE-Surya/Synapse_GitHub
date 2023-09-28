@@ -1,0 +1,17 @@
+{
+	"name": "testing prod",
+	"properties": {
+		"activities": [
+			{
+				"name": "prod_testchfcxhfch",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"annotations": []
+	}
+}

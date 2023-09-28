@@ -1,0 +1,17 @@
+{
+	"name": "Application_Table",
+	"properties": {
+		"content": {
+			"query": "create schema edw;\n\ncreate table edw.Application(\n    ID varchar(18),\n    OwnerID varchar(18),\n    Name varchar(255),\n    RecordTypeId varchar(18),\n    Account varchar(18),\n    Amortization_Term decimal(16,2),\n    CL_Product_Name varchar(255),\n    CL_Product varchar(255),\n    CL_Purpose varchar(255),\n    Interest_Rate decimal(16,2),\n    LTV_Pledged_Collateral decimal(16,2),\n    Loan_Amount decimal(16,2),\n    Status varchar(255),\n    Term decimal,\n    Total_Score decimal(16,2),\n    Adjustment_LTV decimal(16,2),\n    Approval_Date datetime,\n    CL_Contract varchar(18),\n    Current_LTV_Including_Prompt_HS decimal(16,2),\n    Current_LTV_Including_Prompt_LS decimal(16,2),\n    Current_LTV_Including_Prompt decimal(16,2),\n    Decline_Reason varchar(18),\n    Estimate_LTV_HS decimal(16,2),\n    Estimate_LTV decimal(16,2),\n    Estimated_LTV_LS decimal(16,2),\n    Prompt_LTV decimal(16,2),\n    Weighted_LTV decimal(16,2),\n    LTV_Before_PFS_Loan decimal(16,2),\n    CLTV decimal(16,2),\n    LTV decimal(16,2),\n    Term_in_months decimal(16,2),\n    Total_no_of_co_borrowers decimal,\n    Co_borrower_names varchar(1000),\n    Created_Date datetime,\n    Created_By_ID varchar(18),\n    Last_Modified_Date datetime,\n    Last_Modified_By_ID varchar(18)\n);\n\ninsert into edw.Application(ID,OwnerId,Name) values('a001','owner1','Surya1');\ninsert into edw.Application(ID,OwnerId,Name) values('a002','owner2','Surya2');\n\nSELECT * from  edw.Application;\n \n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "PROD",
+				"poolName": "PROD"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

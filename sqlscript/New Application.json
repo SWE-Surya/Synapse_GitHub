@@ -2,7 +2,7 @@
 	"name": "New Application",
 	"properties": {
 		"content": {
-			"query": "-- hello",
+			"query": "-- hello\nhy",
 			"metadata": {
 				"language": "sql"
 			},

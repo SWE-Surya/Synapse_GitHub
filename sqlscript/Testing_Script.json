@@ -1,0 +1,17 @@
+{
+	"name": "Testing_Script",
+	"properties": {
+		"content": {
+			"query": "--  New Script for Testing PROD",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "PROD",
+				"poolName": "PROD"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
